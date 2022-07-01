@@ -1,12 +1,12 @@
 # Research-Problem Labeling
-The "rp_labeling" directory has scripts to build a CRF model and save it, evaluate it on unseen data, and to generate extracted-research-problems from the sentences of unseen data.
+The "rp_labeling" directory has scripts to build a CRF model and save it, evaluate it on unseen data, and to extract research-problems from the sentences of unseen data.
 
 ## CRF model
  "crf-model-sk.py" script uses annotated sentences provided in "labeled_train_data_set.xlsx" file in "create_labeled_data_sets" directory
   to build a CRF model which is able to tag a given sentence with three specific labels:<br />
-  - b_rp : shows the start word in a reaserch-problem phrase
-  - i_rp : shows a following word in a resaerch-problem phrase
-  - o : shows a word that is not a part of a reserch-problem phrase in a sentence
+  - b_rp : shows the start word in a research-problem phrase
+  - i_rp : shows a following word in a research-problem phrase
+  - o : shows a word that is not a part of a research-problem phrase in a sentence
 
 The input data for feature extraction has a format like this:<br />
   -[('Gated-Attention', 'NN', 'o'), ('Readers', 'NNS', 'o'), ('for', 'IN', 'o'), ('Text', 'NNP', 'b_rp'), ('Comprehension', 'NNP', 'i_rp')]
@@ -27,7 +27,7 @@ Then, these features will be used to build a CRF model using sklearn_crfsuite.CR
  ![results](/evaluation-results.PNG)
 
 ## Extracting research-problem phrases from unseen sentences
-"predict_rp_of_sentence.py" can be used to extract "reaserch-problems" for all sentences in "labeled_evaluate_data_set.xlsx" using the CRF model.<br />
+"predict_rp_of_sentence.py" can be used to extract "research-problems" for all sentences in "labeled_evaluate_data_set.xlsx" using the CRF model.<br />
 This script saves the results in "unseen_data_predictions.xlsx" file, with these columns: 
  - real rp phrase
  - extracted rp phrase<br />
