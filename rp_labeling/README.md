@@ -1,4 +1,4 @@
-# Reaserch-Problem Labeling
+# Research-Problem Labeling
 The "rp_labeling" directory has scripts to build a CRF model and save it, evaluate it on unseen data, and to generate extracted-research-problems from the sentences of unseen data.
 
 ## CRF model
