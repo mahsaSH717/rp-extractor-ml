@@ -7,15 +7,15 @@
 ## Description
 
 - Creating labeled dataset Excel files from original datasets
-   - The original training dataset : [training_data](https://github.com/ncg-task/training-data).
-   - The original test(evaluation) dataset : [test_data](https://github.com/ncg-task/test-data).
-   - In both original datasets, some records had missed [],causing problems in processing them. These records have been founded
+   - The original training dataset: [training_data](https://github.com/ncg-task/training-data).
+   - The original test(evaluation) dataset: [test_data](https://github.com/ncg-task/test-data).
+   - In both original datasets, some records had missed [], causing problems in processing them. These records have been founded
    and corrected, resulting in "input-data"(train), "unseen-data"(test) folders as primitive datasets in this project.
 
    - running "create-annotated-data-set-from-jsons.py" script will goes through all folders in primitive datasets(train/test), looking for research-problem.json
 files, and generates equivalent Excel file containing the research-problem phrase, the sentence, and labeled sentence
 
-   - For example considering this research-problem.json :
+   - For example considering this research-problem.json:
      -  {"has research problem" :
             [["Text Comprehension", {"from sentence" : "Gated - Attention Readers for Text Comprehension"}]]}<br />
              <br />The equivalent row in Excel file is as follows, where <B_RP> tag shows the beginning word of a rp-phrase and <I_RP> tag shows the following words of a rp-phrase<br /> 
