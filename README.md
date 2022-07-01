@@ -11,3 +11,5 @@ This project comprises tow main parts:
    - For more details please check out : [Creating labeled dataset README](create_labeled_data_sets/README.md) 
 
 2. Building a crf model to detect "research-problem" phrases of a sentence and evaluate it
+
+   - For more details and results please check out : [research-problem labelin README](rp-extractor-ml/README.md) 
