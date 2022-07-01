@@ -8,6 +8,11 @@ The "rp_labeling" directory has scripts to build a crf model and save it, evalua
   - i_rp : shows a following word in a resaerch-problem phrase
   - o : shows a word that is not a part of a reserch-problem phrase in a sentence
 
+The input data for feature extraction has a format like this:<br />
+  -[('Gated-Attention', 'NN', 'o'), ('Readers', 'NNS', 'o'), ('for', 'IN', 'o'), ('Text', 'NNP', 'b_rp'), ('Comprehension', 'NNP', 'i_rp')]
+
+The "word2features" method in "common_functions.py" will extract various features of each word, as well as 1 and/or 2 words after and/or before it if possible
+then, these features will be used to bild a crf model using sklearn_crfsuite.CRF method
   
  The result is a model which is saved to "crf_model.sav" file in the same directory and can be used for evaluating or predicting the labels of new sentences
  The results of building the model and testing it over 20% of training data is as follows:
