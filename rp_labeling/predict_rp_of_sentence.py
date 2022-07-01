@@ -1,8 +1,7 @@
 import pickle
-
 from common_functions import *
 
-labeled_evaluate_data_set_path = "..\create_data_sets\labeled_train_data_set.xlsx"
+labeled_evaluate_data_set_path = "..\create_labeled_data_sets\labeled_evaluate_data_set.xlsx"
 crf_model_file = 'crf_model.sav'
 
 
@@ -33,10 +32,10 @@ def make_prediction_for_unseen_data(unseen_data_file_path):
                     label = label + " " + x1[0]
             predicted_values.append(label)
 
-    df = evaluate_data_set.assign(steals=predicted_values)
-    df.to_excel("output2.xlsx")
+    df = evaluate_data_set.drop(['sentence', 'annotated_sentence'], axis=1)
+    df['Predicted_Research_Problem'] = predicted_values
+    df.to_excel("unseen_data_predictions.xlsx")
 
 
 if __name__ == '__main__':
     make_prediction_for_unseen_data(labeled_evaluate_data_set_path)
-

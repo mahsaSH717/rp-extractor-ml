@@ -1,5 +1,4 @@
 import re
-
 import nltk
 import pandas as pd
 from bs4 import BeautifulSoup as bs
@@ -25,9 +24,9 @@ def remove_punctuation(with_punctuation):
         for char in with_punctuation:
             if char not in punctuations:
                 without_punctuation = without_punctuation + char
-
-    except:
-        print("")
+    #
+    # except:
+    #     print("")
     finally:
 
         return without_punctuation
@@ -45,7 +44,6 @@ def word2features(doc, i):
     word = doc[i][0]
     postag = doc[i][1]
 
-    # Common features for all words. You may add more features here based on your custom use case
     features = [
         'bias',
         'word.lower=' + word.lower(),
@@ -84,16 +82,6 @@ def word2features(doc, i):
             '-2:word.isdigit=%s' % word2.isdigit(),
             '-2:postag=' + postag2,
         ])
-    # if i > 2:
-    #     word3 = doc[i - 3][0]
-    #     postag3 = doc[i - 3][1]
-    #     features.extend([
-    #         '-3:word.lower=' + word3.lower(),
-    #         '-3:word.istitle=%s' % word3.istitle(),
-    #         '-3:word.isupper=%s' % word3.isupper(),
-    #         '-3:word.isdigit=%s' % word3.isdigit(),
-    #         '-3:postag=' + postag3
-    #     ])
 
     # Features for words that are not at the end of a document
     if i < len(doc) - 1:
@@ -122,16 +110,6 @@ def word2features(doc, i):
             '+2:postag=' + ppostag2
         ])
 
-    # if i < len(doc) - 3:
-    #     pword3 = doc[i + 3][0]
-    #     ppostag3 = doc[i + 3][1]
-    #     features.extend([
-    #         '+3:word.lower=' + pword3.lower(),
-    #         '+3:word.istitle=%s' % pword3.istitle(),
-    #         '+3:word.isupper=%s' % pword3.isupper(),
-    #         '+3:word.isdigit=%s' % pword3.isdigit(),
-    #         '+3:postag=' + ppostag3
-    #     ])
     return features
 
 
@@ -163,7 +141,7 @@ def generate_labeled_docs(soup):
                     tags.append((token, wrd.name))
 
         docs.append(tags)  # appends all the individual documents into one list
-    return docs;
+    return docs
 
 
 def generate_labeled_tagged_data(labeled_train_data):
