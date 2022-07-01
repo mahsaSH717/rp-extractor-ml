@@ -9,7 +9,7 @@
    - The original train dataset : [training_data](https://github.com/ncg-task/training-data).
    - The original test(evaluation) dataset : [test_data](https://github.com/ncg-task/test-data).
    - In both original datasets some records had missed [],causing problems in processing them. these records have been founded
-   and corrected by hand resulting in original datasets in this project in folders "input-data","test-data" 
+   and corrected, resulting in "input-data","unseen-data" folders as original datasets in this project.
 
    - running "create-annotated-data-set-from-jsons.py" script will goes through all folders in original datasets(train/test), looking for research-problem.json
 files, and generates equivalent Excel file containing the research-problem phrase, the sentence and labeled sentence
