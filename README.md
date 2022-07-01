@@ -4,7 +4,7 @@ This python project provides a system which can detect "research problem" phrase
 
 ## project structure
 
-This project is consist of tow main parts:
+This project this project comprises tow main parts:
 
 1. Creating labeled dataset in Excel from original datasets
    
