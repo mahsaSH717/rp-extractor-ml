@@ -26,7 +26,8 @@ The "rp_labeling" directory has scripts to build a crf model and save it, evalua
 This script saves the results in "unseen_data_predictions.xlsx" file, with these columns: 
  - real rp phrase
  - extracted rp phrase
- - the sentence
+a part of this file can be seen in:
+![results](/evaluation-results.PNG)
  
 
 ![image](https://user-images.githubusercontent.com/45291684/176881527-eeeaee18-d937-475a-b890-5ee4090da14e.png)
