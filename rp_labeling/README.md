@@ -1,5 +1,5 @@
 # Reaserch-Problem Labeling
-The "rp_labeling" directory has scripts to build a crf model and save it, evaluate it on unseen data, and to generate predicted-research-problems given sentences of unseen data
+The "rp_labeling" directory has scripts to build a crf model and save it, evaluate it on unseen data, and to generate predicted-research-problems given in the sentences of unseen data
 
 ## CRF model
  "crf-model-sk.py" script uses annotated sentences provided in "labeled_train_data_set.xlsx" file in "create_labeled_data_sets" directory
@@ -14,20 +14,22 @@ The "rp_labeling" directory has scripts to build a crf model and save it, evalua
  
  ![results](/train-test-result-crf.PNG)
 
-## Evaluate model
+## Evaluate the model
  "evaluate_on_unseen.py" uses the unseen data provided in "labeled_evaluate_data_set.xlsx" and the saved crf-model to predict the labels of each token in the sentences
  
   The results of this evaluation is as follows:
  
  ![results](/evaluation-results.PNG)
 
-## prediction part
-"predict_rp_of_sentence.py" can be used to generate extracted "reaserch-problems" for all sentences in "labeled_evaluate_data_set.xlsx".
+## Extracting research-problem phrases from unseen sentences
+"predict_rp_of_sentence.py" can be used to generate extracted "reaserch-problems" for all sentences in "labeled_evaluate_data_set.xlsx" using the CRF model.<br />
 This script saves the results in "unseen_data_predictions.xlsx" file, with these columns: 
  - real rp phrase
- - extracted rp phrase
-a part of this file can be seen in:
-![results](/evaluation-results.PNG)
+ - extracted rp phrase<br />
+
+A part from this file is as follows, where the first column is real research-problem and the second is the extraxted values by model:<br /> 
+
+![results](/extracted--vs-real-phrases.PNG)
  
 
 ![image](https://user-images.githubusercontent.com/45291684/176881527-eeeaee18-d937-475a-b890-5ee4090da14e.png)
