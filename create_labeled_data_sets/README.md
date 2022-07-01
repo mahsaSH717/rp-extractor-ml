@@ -2,8 +2,9 @@
   
   Creating labeled dataset Excel files from original datasets<br />
   
-  "create_labeled_data_sets" directory contains the original training and test datasets, and an script to build desired Excel datasets for sequence labeling
-
+  "create_labeled_data_sets" directory contains the original training and test datasets, and an script to build desired Excel datasets for sequence labeling.<br />
+  "rp" is sometimes used to refer to "research-problem".
+  
 ## Description
 
 - Creating labeled dataset Excel files from original datasets
@@ -24,5 +25,6 @@ files, and generates equivalent Excel file containing the research-problem phras
             research_problem	 sentence	                                         annotated_sentence
             Text Comprehension	 Gated - Attention Readers for Text Comprehension	<document>Gated-Attention Readers for <B_RP>Text</B_RP> <I_RP>Comprehension</I_RP></document>
             
-   - The labeled training dataset file is "labeled_train_data_set.xlsx" and the labeled test dataset file is "labeled_evaluate_data_set.xlsx"<br />.
-   I will use these excel files to train a CRF model and evaluate it.
+   - The labeled training dataset file is "labeled_train_data_set.xlsx" and the labeled test dataset file is "labeled_evaluate_data_set.xlsx".<br />I will use these excel files to train a CRF model and evaluate it.
+
+*To move to next part about building the model please check out README file in: [research-problem labeling](rp_labeling)
