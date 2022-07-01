@@ -6,7 +6,7 @@ This python project provides a system which can detect "research problem" phrase
 
 This project is consist of tow main parts:
 
-1. Creating labeled dataset Excel files from original datasets
+1. Creating labeled dataset in Excel from original datasets
    
    - For more details please check out : [Creating labeled dataset README](create_labeled_data_sets/README.md) 
 
