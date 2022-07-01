@@ -54,10 +54,10 @@ labeled_evaluate_data_set_xlsx = "labeled_evaluate_data_set.xlsx"
 
 def process_data(output_file_name, rp_json_root_folder_path):
     """
+     saves the result Excel file
 
     :param output_file_name: output Excel file name
     :param rp_json_root_folder_path: dataset folder name containing research problem jsons
-    :return: saves the result Excel file
     """
 
     workbook = xlsxwriter.Workbook(output_file_name)

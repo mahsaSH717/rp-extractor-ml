@@ -24,9 +24,6 @@ def remove_punctuation(with_punctuation):
         for char in with_punctuation:
             if char not in punctuations:
                 without_punctuation = without_punctuation + char
-    #
-    # except:
-    #     print("")
     finally:
 
         return without_punctuation
@@ -140,7 +137,7 @@ def generate_labeled_docs(soup):
                 for token in temp:
                     tags.append((token, wrd.name))
 
-        docs.append(tags)  # appends all the individual documents into one list
+        docs.append(tags)
     return docs
 
 
