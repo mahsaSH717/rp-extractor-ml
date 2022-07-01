@@ -26,5 +26,3 @@ files, and generates equivalent Excel file containing the research-problem phras
             Text Comprehension	 Gated - Attention Readers for Text Comprehension	<document>Gated-Attention Readers for <B_RP>Text</B_RP> <I_RP>Comprehension</I_RP></document>
             
    - The labeled training dataset file is "labeled_train_data_set.xlsx" and the labeled test dataset file is "labeled_evaluate_data_set.xlsx".<br />I will use these excel files to train a CRF model and evaluate it.
-
-*To move to next part about building the model please check out README file in: [research-problem labeling](https://github.com/mahsaSH717/rp-extractor-ml/rp_labeling)
