@@ -8,8 +8,8 @@ This project comprises two main parts:
 
 1. Creating labeled datasets in Excel from original datasets
    
-   - For more details please check out: [creating labeled dataset README](create_labeled_data_sets/README.md) 
+   - For more details please check out README file in: [creating labeled dataset](create_labeled_data_sets) 
 
 2. Building a CRF model to extract "research-problem" phrases of a sentence with evaluations
 
-   - For more details and results, please check out: [research-problem labeling README](rp_labeling/README.md) 
+   - For more details and results, please check out README file in: [research-problem labeling](rp_labeling) 
