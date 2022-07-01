@@ -34,5 +34,5 @@ This script saves the results in "unseen_data_predictions.xlsx" file, with these
 
 A part from this file is as follows, where the first column is real research-problem and the second is the extracted values by model:<br /> 
 
-![results](/extracted--vs-real-phrases.PNG)
+![results](/extracted-vs-real-phrases.PNG)
  
