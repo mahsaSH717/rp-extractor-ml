@@ -2,7 +2,7 @@
   
   Creating labeled dataset Excel files from original datasets<br />
   
-  "create_labeled_data_sets" directory contains the original training and test datasets, and an script to build desired Excel datasets for sequence labeling.<br />
+  "create_labeled_data_sets" directory contains the original training and test datasets, and a script to build desired Excel datasets for sequence labeling.<br />
   "rp" is sometimes used to refer to "research-problem".
   
 ## Description
