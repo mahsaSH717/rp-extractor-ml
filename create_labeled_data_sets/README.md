@@ -10,7 +10,7 @@
 - Creating labeled dataset Excel files from original datasets
    - The original training dataset: [training_data](https://github.com/ncg-task/training-data).
    - The original test(evaluation) dataset: [test_data](https://github.com/ncg-task/test-data).
-   - In both original datasets, some records had missed [], causing problems in processing them. These records have been founded
+   - In both original datasets, some records had missed [], causing problems in processing them. These records have been found
    and corrected, resulting in "input-data"(train), "unseen-data"(test) folders as primitive datasets in this project.
 
    - running "create-annotated-data-set-from-jsons.py" script will goes through all folders in primitive datasets(train/test), looking for research-problem.json
